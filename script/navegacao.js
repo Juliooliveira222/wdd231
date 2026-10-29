@@ -57,3 +57,6 @@ document.addEventListener("keydown", (event) => {
         menuButton.focus();
     }
 });
+
+const forecast = document.querySelector("#weather-forecast");
+const url = `https://api.openweathermap.org/data/2.5/forecast?lat=-23.1&lon=-45.7&appid=${apiKey}&units=metric&lang=pt_br`;
