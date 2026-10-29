@@ -1,28 +1,234 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <!-- Arquivos css -->
-     <link rel="stylesheet" href="estilos/normalize.css">
-     <link rel="stylesheet" href="estilos/tela-grande.css">
-     <link rel="stylesheet" href="estilos/tela-pequena.css">
+    <title>Câmara de Comércio Caçapava</title>
 
-     <!-- Fontes google -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/tela-pequena.css">
+    <link rel="stylesheet" href="estilos/tela-grande.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <meta
+        name="description"
+        content="Câmara de Comércio Caçapava - Fortalecendo Empresas e Conectando Negócios."
+    >
 
 </head>
+
 <body>
-    <header>
-        <img src="imagens/casa.svg" alt="Logo do site" width="512" height="512">
-    </header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
-    <script src="script/navegacao.js"></script>
+
+<header>
+
+    <div class="logo">
+        <h1>Câmara de Comércio Caçapava</h1>
+    </div>
+
+    <button
+        id="menu-button"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="navigation"
+    >
+        ☰
+    </button>
+
+    <nav
+        id="navigation"
+        aria-label="Navegação Principal"
+    >
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="directory.html">Diretório</a></li>
+            <li><a href="events.html">Eventos</a></li>
+            <li><a href="join.html">Associe-se</a></li>
+            <li><a href="contact.html">Contato</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>Fortalecendo Empresas. Conectando Pessoas.</h2>
+
+            <p>
+                Descubra oportunidades de crescimento e networking
+                para sua empresa em Caçapava.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="join.html" class="btn btn-primary">
+                    Associe-se Agora
+                </a>
+
+                <a href="about.html" class="btn btn-secondary">
+                    Saiba Mais
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="about">
+
+        <div class="about-content">
+
+            <h2>Sobre a Câmara de Comércio Caçapava</h2>
+
+            <p>
+                A Câmara de Comércio Caçapava trabalha para fortalecer
+                o comércio local, apoiar empresários e fomentar o
+                desenvolvimento econômico da cidade.
+            </p>
+
+            <p>
+                Nossa missão é conectar empresas, promover eventos
+                estratégicos e criar oportunidades que impulsionem
+                o crescimento dos negócios da região.
+            </p>
+
+            <a href="about.html" class="btn btn-primary">
+                Conheça Nossa História
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="info-grid">
+
+        <article class="card">
+
+            <h2>Eventos em Destaque</h2>
+
+            <ul>
+                <li>Workshop de Marketing Digital</li>
+                <li>Feira Regional de Negócios</li>
+                <li>Networking Empresarial</li>
+            </ul>
+
+        </article>
+
+        <section class="card forecast">
+
+            <h2>Previsão de 3 Dias</h2>
+
+            <div id="forecast-container">
+                <div>Carregando previsão...</div>
+            </div>
+
+        </section>
+
+    </section>
+
+    <section class="spotlight">
+
+        <h2>Empresas Associadas em Destaque</h2>
+
+        <div class="company-grid">
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    Logo
+                </div>
+
+                <h3>Empresa A</h3>
+
+                <p>Tecnologia</p>
+
+            </article>
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    Logo
+                </div>
+
+                <h3>Empresa B</h3>
+
+                <p>Construção</p>
+
+            </article>
+
+            <article class="company-card">
+
+                <div class="company-logo">
+                    Logo
+                </div>
+
+                <h3>Empresa C</h3>
+
+                <p>Serviços</p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="cta">
+
+        <h2>Faça Parte da Nossa Comunidade</h2>
+
+        <p>
+            Amplie sua rede de contatos e fortaleça sua presença
+            no mercado local.
+        </p>
+
+        <a href="join.html" class="btn btn-primary">
+            Tornar-se Membro
+        </a>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <h3>Câmara de Comércio Caçapava</h3>
+
+        <p>Caçapava - SP</p>
+
+        <p>contato@camaracacapava.com.br</p>
+
+        <p>(12) 3333-4444</p>
+
+        <div class="social-links">
+
+            <a href="#">Facebook</a>
+
+            <a href="#">Instagram</a>
+
+            <a href="#">LinkedIn</a>
+
+        </div>
+
+        <p id="lastModified"></p>
+
+    </div>
+
+</footer>
+<script src="script/navegacao.js"defer></script>
 </body>
 </html>

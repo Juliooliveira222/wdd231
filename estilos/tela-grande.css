@@ -1,0 +1,79 @@
+@media screen and (min-width: 768px) {
+
+   header {
+    background-color: #005a9c;
+    color: white;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+    #menu-button {
+        display: none;
+    }
+
+    #navigation {
+        display: block;
+    }
+
+    #navigation ul {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    #navigation li {
+        margin: 0;
+    }
+
+    #navigation a {
+        color: white;
+        text-decoration: none;
+        padding: .5rem;
+    }
+
+    .hero {
+        padding: 5rem 2rem;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .about {
+        max-width: 900px;
+        margin: 2rem auto;
+        border-radius: 8px;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin: 2rem;
+    }
+
+    .company-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .spotlight {
+        margin: 2rem;
+    }
+
+    .cta {
+        max-width: 900px;
+        margin: 2rem auto;
+        border-radius: 8px;
+    }
+}

@@ -1,0 +1,160 @@
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #005a9c;
+    color: white;
+    padding: 1rem;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#navigation {
+    display: none;
+}
+
+#navigation.open {
+    display: block;
+    width: 100%;
+}
+
+
+#navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navigation li {
+    margin: .5rem 0;
+}
+
+#navigation a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: .5rem;
+}
+
+#navigation a:hover {
+    background-color: #f4a261;
+    color: black;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+}
+
+.hero h2 {
+    color: #005a9c;
+}
+
+.hero-buttons {
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: .8rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #f4a261;
+    color: black;
+}
+
+.btn-secondary {
+    background-color: #005a9c;
+    color: white;
+}
+
+.about {
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.about h2 {
+    color: #005a9c;
+}
+
+.info-grid {
+    padding: 1rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    color: #005a9c;
+}
+
+.spotlight {
+    padding: 1rem;
+}
+
+.spotlight h2 {
+    text-align: center;
+    color: #005a9c;
+}
+
+.company-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.company-logo {
+    height: 80px;
+    background-color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.cta {
+    text-align: center;
+    background-color: white;
+    padding: 2rem 1rem;
+}
+
+.cta h2 {
+    color: #005a9c;
+}
+
+footer {
+    background-color: #005a9c;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 .5rem;
+}
