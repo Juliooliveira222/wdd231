@@ -16,6 +16,7 @@ header img {
     display: block;
     width: 100%;
     height: auto;
+    padding-bottom: 4px;
 }
 
 header span {
@@ -28,9 +29,15 @@ header span {
     border: none;
     color: #3D405B;
     cursor: pointer;
+    font-family: verdana, geneva, tahoma, sans-serif;
 }
 
-.hamburguer ::after {
-    content: "\2630";
+.hamburguer::after {
+    content:"\2630";
+    font-size: 1.5rem;
+}
+
+.hamburguer.show::after {
+    content:"\00D7";
     font-size: 1.5rem;
 }
