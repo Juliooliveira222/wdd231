@@ -1,43 +1,118 @@
 *{
     font-family: "josefin sans", sans-serif;
     box-sizing: border-box;
-}
+ }
 
-header {
-    display:grid;
+ header {
+    display: grid;
     grid-template-columns: 24px auto 44px;
     padding: 5px 0 5px 10px;
     border-bottom: solid 1px  #ddd;
     column-gap: 8px;
     align-items: end;
-}
+ }
 
-header img {
+ header img {
     display: block;
     width: 100%;
     height: auto;
     padding-bottom: 4px;
-}
+ }
 
-header span {
+ header span {
     font-size: 1.2rem;
     color: #3D405B;
-}
+ }
 
-.hamburguer {
-    background: none;
+.hamburger {
+    background: transparent;
     border: none;
     color: #3D405B;
     cursor: pointer;
-    font-family: verdana, geneva, tahoma, sans-serif;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    transition: background-color .2s ease, color .2s ease;
 }
 
-.hamburguer::after {
-    content:"\2630";
-    font-size: 1.5rem;
+.hamburger:hover {
+    background-color: #f1f1f1;
 }
 
-.hamburguer.show::after {
-    content:"\00D7";
-    font-size: 1.5rem;
+.hamburger::after {
+    content: "☰";
 }
+
+.hamburger.show::after {
+    content: "✕";
+}
+
+.navegacao {
+    display: none;
+}
+
+.navegacao.show {
+    display: block;
+}
+
+.navegacao ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.navegacao a {
+   display: block;
+   padding: .8rem 10px;
+   color: #3D405B;
+   text-decoration: none;
+   border-bottom: solid 1px #ddd;
+}
+
+.navegacao li.atual {
+    background-color: #eee;
+}
+
+h1 {
+   margin-left: 10px;
+}
+
+.navegacao a:hover {
+    background-color: #f1f1f1;
+}  
+
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social a {
+   display: flex;
+   border: #ddd solid 1px;
+   border-radius: 50%;
+   justify-content: center;
+   align-items: center;
+   width: 44px;
+   height: 44px;
+}
+
+.social img {
+   width: 22px;
+   height: 22px;
+}
+
+.social a:hover {
+    background-color: #ddd;
+}
+
+
+

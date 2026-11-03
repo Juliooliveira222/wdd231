@@ -3,21 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documento</title>
+    <title>Meu Site</title>
 
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/tela-pequena.css">
     <link rel="stylesheet" href="estilos/tela-grande.css">
 </head>
 <body>
+
     <header>
         <img src="imagens/casa.svg" alt="logo do site" width="512" height="512">
         <span>Meu Site</span>
-        <button id="ham-btn" class="hamburguer"></button>
+        <button id="ham-btn" class="hamburger"></button>
     </header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
-    <script src="script/navegacao.js"></script>
+
+    <nav id="nav-bar" class="navegacao">
+        <ul>
+            <li ><a href="#">Notícias e Eventos</a></li>
+            <li class="atual"><a href="#">Templos Dedicados</a></li>
+            <li><a href="#">Templos Anunciados</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Templos Dedicados</h1>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com" target="_blank"><img src="imagens/github.svg" alt="GitHub" width="16" height="16"></a>
+            <a href="https://facebook.com" target="_blank"><img src="imagens/facebook.svg" alt="Facebook" width="16" height="16"></a>
+            <a href="https://x.com/" target="_blank"><img src="imagens/twitter-x.svg" alt="Twitter X" width="16" height="16"></a>
+            <a href="https://instagram.com" target="_blank"><img src="imagens/instagram.svg" alt="Instagram" width="16" height="16"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="imagens/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
+        </div>
+        <p>Simbólo de Direitos Autorais e Ano atual</p>
+        <p>Última Alteração</p>
+    </footer>
+    <script src="script/navegacao.js" defer></script>
+
 </body>
 </html>

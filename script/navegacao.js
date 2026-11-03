@@ -1,5 +1,7 @@
 const navbtn = document.querySelector("#ham-btn");
-    navbtn.addEventListener("click", () => {
-        navbtn.classList.toggle("show");
-    });
-    
+const navlinks = document.querySelector("#nav-bar");
+
+navbtn.addEventListener("click", () => {
+    navbtn.classList.toggle("show");
+    navlinks.classList.toggle("show");
+});
