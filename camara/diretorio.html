@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Diretório de empresas da Câmara de Comércio de Caçapava">
-    <meta name="author" content="Seu Nome">
 
-    <title>Diretório | Câmara de Comércio de Caçapava</title>
+    <title>Diretório | Câmara de Comércio Caçapava</title>
+
+    <meta name="author" content="Julio Oliveira">
+    <meta name="description"
+        content="Diretório de empresas associadas à Câmara de Comércio de Caçapava">
 
     <link rel="stylesheet" href="estilos/tela-pequena.css">
     <link rel="stylesheet" href="estilos/tela-grande.css">
@@ -16,54 +18,65 @@
 
 <body>
 
-   <header>
+    <!-- COPIE O MESMO HEADER DO INDEX -->
 
-    <div class="logo">
-        <h1>Câmara de Comércio Caçapava</h1>
-    </div>
+    <header>
 
-    <button
-        id="menu-button"
-        type="button"
-        aria-label="Abrir menu de navegação"
-        aria-expanded="false"
-        aria-controls="navigation"
-    >
-        ☰
-    </button>
+        <nav>
+            <h1>Câmara de Comércio Caçapava</h1>
 
-    <nav id="navigation" aria-label="Navegação Principal">
-        <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="directory.html">Diretório</a></li>
-            <li><a href="events.html">Eventos</a></li>
-            <li><a href="join.html">Associe-se</a></li>
-            <li><a href="contact.html">Contato</a></li>
-        </ul>
-    </nav>
+            <button id="menuBtn" aria-label="Abrir Menu">
+                ☰
+            </button>
 
-</header>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="diretorio.html" class="active">Diretório</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Associe-se</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
 
     <main>
 
-    <section class="directory-header">
-        <h2>Diretório de Empresas</h2>
+        <section class="directory-header">
+            <h2>Diretório de Empresas Associadas</h2>
 
-        <div class="view-controls">
-            <button id="gridBtn">⬛ Grade</button>
-            <button id="listBtn">📋 Lista</button>
-        </div>
-    </section>
+            <p>
+                Conheça as empresas que fazem parte da Câmara de Comércio de
+                Caçapava e fortalecem o desenvolvimento econômico da região.
+            </p>
+        </section>
 
-    <section id="directory"></section>
+        <section class="view-controls">
 
-</main>
+            <button id="gridBtn" aria-label="Visualização em grade">
+                🔳 Grade
+            </button>
+
+            <button id="listBtn" aria-label="Visualização em lista">
+                📋 Lista
+            </button>
+
+        </section>
+
+        <section id="directory" class="grid-view">
+            <!-- Os cards serão criados pelo JavaScript -->
+        </section>
+
+    </main>
+
+    <!-- COPIE O MESMO FOOTER DO INDEX -->
 
     <footer>
 
-        <div class="footer-info">
+        <div>
             <h3>Câmara de Comércio de Caçapava</h3>
+
             <p>Rua Central, 100</p>
             <p>Caçapava - SP</p>
             <p>contato@camaracacapava.com.br</p>
@@ -71,15 +84,46 @@
         </div>
 
         <div class="social-links">
-            <a href="#" aria-label="YouTube">YouTube</a>
-            <a href="#" aria-label="Facebook">Facebook</a>
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://facebook.com" target="_blank">
+            <img
+                src="imagens/facebook.svg"
+                alt="Facebook"
+                width="16"
+                height="16"
+            >
+        </a>
+
+        <a href="https://x.com" target="_blank">
+            <img
+                src="imagens/twitter-x.svg"
+                alt="X"
+                width="16"
+                height="16"
+            >
+        </a>
+
+        <a href="https://linkedin.com" target="_blank">
+            <img
+                src="imagens/linkedin.svg"
+                alt="LinkedIn"
+                width="16"
+                height="16"
+            >
+        </a>
         </div>
 
-        <div class="project-info">
-            <p>&copy; <span id="currentYear"></span> Câmara de Comércio de Caçapava</p>
+        <div>
+            <p>
+                &copy; <span id="currentYear"></span>
+                Câmara de Comércio de Caçapava
+            </p>
+
             <p>WDD 231 - Projeto Câmara de Comércio</p>
-            <p>Última atualização: <span id="lastModified"></span></p>
+
+            <p>
+                Última atualização:
+                <span id="lastModified"></span>
+            </p>
         </div>
 
     </footer>
