@@ -1,15 +1,11 @@
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
 
-   header {
-    background-color: #005a9c;
-    color: white;
-    padding: 1rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
     #menu-button {
         display: none;
@@ -29,64 +25,58 @@
         margin: 0;
     }
 
-    #navigation a {
-        color: white;
-        text-decoration: none;
-        padding: .5rem;
-    }
-
-    .hero {
+    .destaque-principal {
         padding: 5rem 2rem;
     }
 
-    .hero h2 {
+    .destaque-principal h2 {
         font-size: 3rem;
     }
 
-    .hero-content {
+    .conteudo-destaque {
         max-width: 900px;
         margin: 0 auto;
     }
 
-    .about {
+    .sobre-camara {
         max-width: 900px;
         margin: 2rem auto;
         border-radius: 8px;
     }
 
-    .info-grid {
+    .grade-informacoes {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        margin: 2rem;
+
+        max-width: 1200px;
+        margin: 2rem auto;
     }
 
-    .company-grid {
+    .grade-associados {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
 
-    .spotlight {
-        margin: 2rem;
+    .empresas-destaque {
+        max-width: 1200px;
+        margin: 2rem auto;
     }
 
-    .cta {
+    .convite-associacao {
         max-width: 900px;
         margin: 2rem auto;
         border-radius: 8px;
     }
-}
 
-@media screen and (min-width: 320px) {
-    .search-container form
-    {
+    .busca-empresas form {
         flex-direction: row;
         max-width: 500px;
         margin: 0 auto;
     }
 
-    .search-container input {
+    .busca-empresas input {
         flex: 1;
     }
 }

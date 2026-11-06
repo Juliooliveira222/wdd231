@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Câmara de Comércio de Caçapava</title>
 
     <link rel="stylesheet" href="estilos/tela-pequena.css">
     <link rel="stylesheet" href="estilos/tela-grande.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+
     <meta name="description" content="Câmara de Comércio Caçapava - Fortalecendo Empresas e Conectando Negócios.">
     <meta name="author" content="Júlio Oliveira">
     <meta property="og:title" content="Câmara de Comércio Caçapava - Conectando Empresas">
     <meta property="og:description" content="Descubra oportunidades de crescimento, networking e diretório de empresas locais em Caçapava.">
     <meta property="og:image" content="https://juliooliveira222.github.io/wdd231/camara/imagens/hero-preview.jpg">
-    <meta property="og:url" content="https://juliooliveira222.github.io/wdd231/camara/diretorio.html">
+    <meta property="og:url" content="https://juliooliveira222.github.io/wdd231/camara/index.html">
 </head>
 
 <body>
@@ -38,10 +39,7 @@
         ☰
     </button>
 
-    <nav
-        id="navigation"
-        aria-label="Navegação Principal"
-    >
+    <nav id="navigation" aria-label="Navegação Principal">
         <ul>
             <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="about.html">Sobre</a></li>
@@ -56,26 +54,31 @@
 
 <main>
 
-    <section class="hero">
+    <section class="destaque-principal">
 
-        <h2>Bem-vindo ao polo comercial de Caçapava</h2>
-
-        <div class="hero-content">
+        <div class="conteudo-destaque">
 
             <h2>Fortalecendo Empresas. Conectando Pessoas.</h2>
 
             <p>
-                Descubra oportunidades de crescimento e networking
-                para sua empresa em Caçapava.
+                Bem-vindo ao polo comercial de Caçapava.
+                Descubra oportunidades de crescimento,
+                networking e desenvolvimento para sua empresa.
             </p>
 
-            <div class="hero-buttons">
+            <div class="botoes-destaque">
 
-                <a href="join.html" class="btn btn-primary">
+                <a
+                    href="join.html"
+                    class="botao botao-associar"
+                >
                     Associe-se Agora
                 </a>
 
-                <a href="about.html" class="btn btn-secondary">
+                <a
+                    href="about.html"
+                    class="botao botao-diretorio"
+                >
                     Saiba Mais
                 </a>
 
@@ -83,42 +86,55 @@
 
         </div>
 
-        <div class="search-container">
+    </section>
 
-            <form action="search.html" method="GET">
-                <label for="search-input">Buscar empresas...</label>
-                <input
-                    type="text"
-                    id="search-input"
-                    name="q"
-                    placeholder="Digite o nome da empresa..."
-                >
-                <button type="submit">Buscar</button>
-            </form>
+    <section class="busca-empresas">
 
-        </div>
+        <h2>Buscar Empresas</h2>
+
+        <form action="search.html" method="get">
+
+            <label for="search-input">
+                Digite o nome da empresa
+            </label>
+
+            <input
+                type="search"
+                id="search-input"
+                name="q"
+                placeholder="Buscar empresa..."
+            >
+
+            <button type="submit">
+                Buscar
+            </button>
+
+        </form>
 
     </section>
 
-    <section class="about">
+    <section class="sobre-camara">
 
-        <div class="about-content">
+        <div class="conteudo-sobre">
 
             <h2>Sobre a Câmara de Comércio Caçapava</h2>
 
             <p>
                 A Câmara de Comércio Caçapava trabalha para fortalecer
-                o comércio local, apoiar empresários e fomentar o
-                desenvolvimento econômico da cidade.
+                o comércio local, apoiar empresários e impulsionar
+                o desenvolvimento econômico da cidade.
             </p>
 
             <p>
                 Nossa missão é conectar empresas, promover eventos
-                estratégicos e criar oportunidades que impulsionem
-                o crescimento dos negócios da região.
+                estratégicos e criar novas oportunidades de negócios
+                para toda a região.
             </p>
 
-            <a href="about.html" class="btn btn-primary">
+            <a
+                href="about.html"
+                class="botao botao-associar"
+            >
                 Conheça Nossa História
             </a>
 
@@ -126,9 +142,9 @@
 
     </section>
 
-    <section class="info-grid">
+    <section class="grade-informacoes">
 
-        <article class="card">
+        <article class="cartao-informativo">
 
             <h2>Eventos em Destaque</h2>
 
@@ -140,7 +156,7 @@
 
         </article>
 
-        <section class="card forecast">
+        <article class="cartao-informativo previsao-tempo">
 
             <h2>Previsão de 3 Dias</h2>
 
@@ -148,21 +164,23 @@
                 Carregando previsão...
             </div>
 
-        </section>
+        </article>
 
     </section>
 
-    <section class="spotlight">
+    <section class="empresas-destaque">
 
         <h2>Empresas Associadas em Destaque</h2>
 
-        <div class="company-grid">
+        <div class="grade-associados">
 
-            <article class="company-card">
+            <article class="cartao-associado">
 
-                <div class="company-logo">
-                    Logo
-                </div>
+                <img
+                    class="logo-associado"
+                    src="imagens/logo-empresa-a.webp"
+                    alt="Logo da Empresa A"
+                >
 
                 <h3>Empresa A</h3>
 
@@ -170,11 +188,13 @@
 
             </article>
 
-            <article class="company-card">
+            <article class="cartao-associado">
 
-                <div class="company-logo">
-                    Logo
-                </div>
+                <img
+                    class="logo-associado"
+                    src="imagens/logo-empresa-b.webp"
+                    alt="Logo da Empresa B"
+                >
 
                 <h3>Empresa B</h3>
 
@@ -182,11 +202,13 @@
 
             </article>
 
-            <article class="company-card">
+            <article class="cartao-associado">
 
-                <div class="company-logo">
-                    Logo
-                </div>
+                <img
+                    class="logo-associado"
+                    src="imagens/logo-empresa-c.webp"
+                    alt="Logo da Empresa C"
+                >
 
                 <h3>Empresa C</h3>
 
@@ -198,17 +220,20 @@
 
     </section>
 
-    <section class="cta">
+    <section class="convite-associacao">
 
         <h2>Faça Parte da Nossa Comunidade</h2>
 
         <p>
-            Amplie sua rede de contatos e fortaleça sua presença
-            no mercado local.
+            Amplie sua rede de contatos, participe de eventos
+            exclusivos e fortaleça sua presença no mercado local.
         </p>
 
-        <a href="join.html" class="btn btn-primary">
-            Tornar-se Membro
+        <a
+            href="join.html"
+            class="botao botao-associar"
+        >
+            Tornar-se Associado
         </a>
 
     </section>
@@ -217,31 +242,55 @@
 
 <footer>
 
-    <div class="footer-content">
+    <h2>Câmara de Comércio Caçapava</h2>
 
-        <h3>Câmara de Comércio Caçapava</h3>
+    <address>
+        Caçapava - SP<br>
+        contato@camaracacapava.com.br<br>
+        (12) 3333-4444
+    </address>
 
-        <p>Caçapava - SP</p>
+    <div class="social-links">
 
-        <p>contato@camaracacapava.com.br</p>
+        <a href="https://facebook.com" target="_blank">
+            <img
+                src="imagens/facebook.svg"
+                alt="Facebook"
+                width="16"
+                height="16"
+            >
+        </a>
 
-        <p>(12) 3333-4444</p>
+        <a href="https://x.com" target="_blank">
+            <img
+                src="imagens/twitter-x.svg"
+                alt="X"
+                width="16"
+                height="16"
+            >
+        </a>
 
-        <div class="social-links">
-
-            <a href="https://facebook.com" target="_blank"><img src="imagens/facebook.svg" alt="Facebook" width="16" height="16"></a>
-
-            <a href="https://x.com/" target="_blank"><img src="imagens/twitter-x.svg" alt="Twitter X" width="16" height="16"></a>
-
-            <a href="https://linkedin.com" target="_blank"><img src="imagens/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
-
-        </div>
-        <p>Simbólo de Direitos Autorais e Ano atual</p>
-        <p id="lastModified"></p>
+        <a href="https://linkedin.com" target="_blank">
+            <img
+                src="imagens/linkedin.svg"
+                alt="LinkedIn"
+                width="16"
+                height="16"
+            >
+        </a>
 
     </div>
 
+    <p>
+        &copy; <span id="currentyear"></span>
+        Câmara de Comércio Caçapava
+    </p>
+
+    <p id="lastModified"></p>
+
 </footer>
+
 <script src="scripts/membros.js" defer></script>
+
 </body>
 </html>

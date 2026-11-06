@@ -1,8 +1,10 @@
+
 body {
     font-family: Roboto, sans-serif;
     margin: 0;
     background-color: #f8f9fa;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
@@ -30,13 +32,12 @@ header {
 
 #navigation.open {
     display: block;
-    width: 100%;
 }
-
 
 #navigation ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #navigation li {
@@ -44,10 +45,11 @@ header {
 }
 
 #navigation a {
+    display: block;
     color: white;
     text-decoration: none;
-    display: block;
     padding: .5rem;
+    border-radius: 4px;
 }
 
 #navigation a:hover {
@@ -55,107 +57,142 @@ header {
     color: black;
 }
 
-.hero {
-    background: linear-gradient(rgba(14, 25, 61, 0.7), rgba(14, 25, 61, 0.7)), url('../imagens/hero-camara.jpg');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+.destaque-principal {
+    background-image:
+        linear-gradient(
+            rgba(14, 25, 61, 0.45),
+            rgba(14, 25, 61, 0.45)
+        ),
+        url("../imagens/hero-camara.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
     text-align: center;
-    padding: 4rem 1rem;
-    color: #ffffff;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 100%;
-    min-height: 50px;
 }
 
-
-.hero h2 {
-    color: #ffffff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+.destaque-principal h2 {
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,.5);
 }
 
-.hero p {
-    color: #f8f9fa;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+.conteudo-destaque {
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+
 }
 
-.hero-buttons {
+.botoes-destaque {
     margin-top: 1rem;
 }
 
-.btn {
+.botao {
     display: inline-block;
     padding: .8rem 1rem;
     border-radius: 5px;
     text-decoration: none;
+    margin: .25rem;
 }
 
-.btn-primary {
+.botao-associar {
     background-color: #f4a261;
     color: black;
 }
 
-.btn-secondary {
+.botao-diretorio {
     background-color: #005a9c;
     color: white;
 }
 
-.about {
+.busca-empresas {
+    background: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+.busca-empresas form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.busca-empresas input,
+.busca-empresas button {
+    padding: .75rem;
+    font-size: 1rem;
+}
+
+.sobre-camara {
+    background-color: white;
     padding: 1.5rem;
-    background-color: white;
 }
 
-.about h2 {
+.sobre-camara h2 {
     color: #005a9c;
 }
 
-.info-grid {
+.conteudo-sobre {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grade-informacoes {
     padding: 1rem;
 }
 
-.card {
+.cartao-informativo {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.cartao-informativo h2 {
+    color: #005a9c;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.empresas-destaque {
+    padding: 1rem;
+}
+
+.empresas-destaque h2 {
+    text-align: center;
+    color: #005a9c;
+}
+
+.cartao-associado {
     background-color: white;
     padding: 1rem;
     border-radius: 8px;
+    text-align: center;
     margin-bottom: 1rem;
 }
 
-.card h2 {
-    color: #005a9c;
+.logo-associado {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
 }
 
-.spotlight {
-    padding: 1rem;
-}
-
-.spotlight h2 {
-    text-align: center;
-    color: #005a9c;
-}
-
-.company-card {
+.convite-associacao {
     background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
     text-align: center;
-    margin-bottom: 1rem;
-}
-
-.company-logo {
-    height: 80px;
-    background-color: #ddd;
-    margin-bottom: 1rem;
-}
-
-.cta {
-    text-align: center;
-    background-color: white;
     padding: 2rem 1rem;
 }
 
-.cta h2 {
+.convite-associacao h2 {
     color: #005a9c;
 }
 
@@ -166,6 +203,15 @@ footer {
     padding: 1rem;
 }
 
+footer h2 {
+    margin-top: 0;
+}
+
+address {
+    font-style: normal;
+    margin: 1rem 0;
+}
+
 .social-links {
     margin: 1rem 0;
 }
@@ -173,22 +219,35 @@ footer {
 .social-links a {
     color: white;
     margin: 0 .5rem;
+    text-decoration: none;
 }
 
-.search-container {
-    margin: 1rem 0;
-    width: 100%;
+.social-links img {
+    width: 24px;
+    height: 24px;
 }
 
-.search-container form {
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.previsao-tempo {
+    text-align: center;
+}
+
+.weather-info {
     display: flex;
-    flex-direction: column; 
-    gap: 0.5rem;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
 }
 
-.search-container input,
-.search-container button {
-    padding: 0.75rem;
-    font-size: 1rem;
+.weather-info img {
+    width: 70px;
+    height: 70px;
 }
