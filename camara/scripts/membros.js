@@ -47,3 +47,55 @@ document.addEventListener("keydown", event => {
     }
 
 });
+
+const forecastElement = document.querySelector("#weather-forecast");
+
+const apiKey = "e7d9532c6269460b997b5169d32c78c5";
+const lat = -23.10;
+const lon = -45.70;
+
+const urlClima = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${apiKey}`;
+
+async function buscarClima() {
+    try {
+
+        const resposta = await fetch(urlClima);
+
+        if (!resposta.ok) {
+            throw new Error("Erro ao buscar previsão");
+        }
+
+        const dados = await resposta.json();
+
+        mostrarClima(dados);
+
+    } catch (erro) {
+
+        forecastElement.textContent =
+            "Não foi possível carregar a previsão.";
+
+        console.error(erro);
+    }
+}
+
+function mostrarClima(dados) {
+
+    const temperatura = Math.round(dados.main.temp);
+    const descricao = dados.weather[0].description;
+    const icone = dados.weather[0].icon;
+
+    forecastElement.innerHTML = `
+        <div class="weather-info">
+            <img
+                src="https://openweathermap.org/img/wn/${icone}@2x.png"
+                alt="${descricao}"
+            >
+            <p><strong>${temperatura}°C</strong></p>
+            <p>${descricao}</p>
+        </div>
+    `;
+}
+
+if (forecastElement) {
+    buscarClima();
+}
