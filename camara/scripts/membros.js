@@ -99,3 +99,10 @@ function mostrarClima(dados) {
 if (forecastElement) {
     buscarClima();
 }
+
+const menuBtn = document.querySelector('#menuBtn');
+const menu = document.querySelector('#menu');
+
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('open');
+});
