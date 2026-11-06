@@ -16,41 +16,49 @@
 
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="images/logo.webp" alt="Logo Câmara de Comércio de Caçapava" width="80" height="80">
-            <div>
-                <h1>Câmara de Comércio de Caçapava</h1>
-                <p>Conectando Negócios e Oportunidades</p>
-            </div>
-        </div>
+   <header>
 
-        <button id="menuBtn" aria-label="Abrir Menu">☰</button>
+    <div class="logo">
+        <h1>Câmara de Comércio Caçapava</h1>
+    </div>
 
-        <nav id="navMenu">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="directory.html" class="active">Diretório</a></li>
-                <li><a href="#">Descubra</a></li>
-                <li><a href="#">Junte-se</a></li>
-            </ul>
-        </nav>
-    </header>
+    <button
+        id="menu-button"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="navigation"
+    >
+        ☰
+    </button>
+
+    <nav id="navigation" aria-label="Navegação Principal">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="directory.html">Diretório</a></li>
+            <li><a href="events.html">Eventos</a></li>
+            <li><a href="join.html">Associe-se</a></li>
+            <li><a href="contact.html">Contato</a></li>
+        </ul>
+    </nav>
+
+</header>
 
     <main>
 
+    <section class="directory-header">
         <h2>Diretório de Empresas</h2>
 
         <div class="view-controls">
-            <button id="gridBtn">🔳 Grade</button>
+            <button id="gridBtn">⬛ Grade</button>
             <button id="listBtn">📋 Lista</button>
         </div>
+    </section>
 
-        <section id="directory" class="grid-view">
-            <!-- Cards carregados pelo JavaScript -->
-        </section>
+    <section id="directory"></section>
 
-    </main>
+</main>
 
     <footer>
 

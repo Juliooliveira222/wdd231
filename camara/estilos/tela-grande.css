@@ -150,23 +150,17 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
 
-    /* ===== DIRETÓRIO ===== */
+@media screen and (min-width: 768px) {
+
+    #directory {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
 
     #directory {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .list-view section {
-        display: grid;
-        grid-template-columns: 150px 1fr;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .list-view img {
-        width: 130px;
-        height: 130px;
     }
 }
