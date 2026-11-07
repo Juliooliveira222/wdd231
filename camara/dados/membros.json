@@ -4,7 +4,7 @@
     "address": "Rua Marechal Deodoro, 120",
     "phone": "(12) 3650-1111",
     "website": "https://www.cacapavainfo.com.br",
-    "image": "images/logo1.webp",
+    "image": "imagens/empresa1.png",
     "membership": 3
   },
   {
@@ -12,7 +12,7 @@
     "address": "Av. Brasil, 450",
     "phone": "(12) 3650-2222",
     "website": "https://www.vpengenharia.com.br",
-    "image": "images/logo2.webp",
+    "image": "imagens/empresa2.png",
     "membership": 2
   },
   {
@@ -20,6 +20,7 @@
   "address": "Av. Brasil, 785",
   "phone": "(12) 3650-3344",
   "website": "https://www.cacapavalogistica.com.br",
+  "image": "imagens/empresa3.png",
   "membership": 1
 },
 {
@@ -27,6 +28,7 @@
   "address": "Rua José de Alencar, 210",
   "phone": "(12) 3650-4455",
   "website": "https://www.valetech.com.br",
+    "image": "imagens/empresa4.png",
   "membership": 3
 },
 {
@@ -34,6 +36,7 @@
   "address": "Rodovia Presidente Dutra, Km 128",
   "phone": "(12) 3650-5566",
   "website": "https://www.serraazul.ind.br",
+    "image": "imagens/empresa5.png",
   "membership": 2
 },
 {
@@ -41,6 +44,7 @@
   "address": "Praça da Bandeira, 45",
   "phone": "(12) 3650-6677",
   "website": "https://www.mercadocentralcacapava.com.br",
+    "image": "imagens/empresa6.png",
   "membership": 1
 },
 {
@@ -48,6 +52,7 @@
   "address": "Rua dos Ipês, 320",
   "phone": "(12) 3650-7788",
   "website": "https://www.valeverdeengenharia.com.br",
+    "image": "imagens/empresa7.png",
   "membership": 3
 }
 
