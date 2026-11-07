@@ -262,27 +262,28 @@ address {
 
 :root {
     --azul: #0b3c5d;
-  * --verde: #2e8b57;
-    --dourado: *f4b400;
+    --verde: #2e8b57;
+    --dourado: #f4b400;
     --cinza: #f4f4f4;
-    *-texto: #333;
+    --texto: #333;
     --branco: #fff;
 }
 
 body {
-    font-family: Arial, *elvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--cinza);
     color: var(--texto);
     line-height: 1.6;
 }
 
 header {
-    background-color: *ar(--azul);
+    background-color: var(--azul);
     color: white;
-    *adding: 1rem;
+    padding: 1rem;
 }
 
-.logo-container {*    display: flex;
+.logo-container {
+    display: flex;
     align-items: center;
     gap: 1rem;
 }
@@ -298,7 +299,6 @@ header {
 
 nav ul {
     list-style: none;
-*
 }
 nav a {
     display: block;
@@ -445,13 +445,34 @@ footer div {
 #members.list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 2rem auto;
 }
 
 #members.list .member-card {
+    display: grid;
+    grid-template-columns: 120px 2fr 1.5fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
     text-align: left;
+}
+
+#members.list .member-card:nth-child(odd) {
+    background-color: #eef5f8;
+}
+
+#members.list .member-card:nth-child(even) {
+    background-color: #ffffff;
+}
+
+#members.list .company-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0;
 }
 
 
@@ -465,4 +486,12 @@ footer div {
     padding: .75rem;
     border: 1px solid #ccc;
     border-radius: 8px;
+}
+
+.company-logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 1rem;
 }

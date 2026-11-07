@@ -17,7 +17,8 @@ let allMembers = [];
 const membershipLevels = {
     1: "Membro",
     2: "Prata",
-    3: "Ouro"
+    3: "Ouro",
+    4: "Diamante"
 };
 
 async function getMembers() {
@@ -53,34 +54,31 @@ function displayMembers(members) {
 
         card.classList.add("member-card");
 
-        card.innerHTML = `
-            <h2>${member.name}</h2>
+       card.innerHTML = `
+            <img
+            src="${member.image}"
+            alt="${member.name}"
+            class="company-logo"
+            loading="lazy">
 
-            <p>
-                <strong>Endereço:</strong>
-                ${member.address}
-            </p>
+        <div>
+        <h3>${member.name}</h3>
+        </div>
 
-            <p>
-                <strong>Telefone:</strong>
-                ${member.phone}
-            </p>
+        <div>
+        ${member.address}
+        </div>
 
-            <p>
-                <a
-                    href="${member.website}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Visitar Site
-                </a>
-            </p>
+        <div>
+        ${member.phone}
+        </div>
 
-            <p>
-                <strong>Plano:</strong>
-                ${membershipLevels[member.membership]}
-            </p>
-        `;
+        <div>
+        <a href="${member.website}" target="_blank">
+            Website
+        </a>
+    </div>
+`;
 
         cards.appendChild(card);
     });
@@ -112,10 +110,9 @@ if (gridBtn && listBtn && cards) {
         cards.classList.remove("list");
     });
 
-    listBtn.addEventListener("click", () => {
-
-        cards.classList.add("list");
-        cards.classList.remove("grid");
+   listBtn.addEventListener("click", () => {
+    cards.classList.remove("grid");
+    cards.classList.add("list");
     });
 }
 
