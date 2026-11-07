@@ -121,9 +121,6 @@ if (gridBtn && listBtn && cards) {
 
 getMembers();
 
-// ======================
-// PREVISÃO DO TEMPO
-// ======================
 
 const forecastElement = document.querySelector("#weather-forecast");
 
