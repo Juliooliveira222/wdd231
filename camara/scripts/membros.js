@@ -121,7 +121,16 @@ if (gridBtn && listBtn && cards) {
 
 getMembers();
 
+const currentYear = document.querySelector("#currentYear");
+const lastModified = document.querySelector("#lastModified");
 
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
+
+if (lastModified) {
+    lastModified.textContent = document.lastModified;
+}
 const forecastElement = document.querySelector("#weather-forecast");
 
 const apiKey = "e7d9532c6269460b997b5169d32c78c5";
