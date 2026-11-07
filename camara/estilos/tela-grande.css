@@ -38,7 +38,8 @@
         margin: 0 auto;
     }
 
-    .sobre-camara {
+    .sobre-camara,
+    .convite-associacao {
         max-width: 900px;
         margin: 2rem auto;
         border-radius: 8px;
@@ -53,21 +54,15 @@
         margin: 2rem auto;
     }
 
-    .grade-associados {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-    }
-
     .empresas-destaque {
         max-width: 1200px;
         margin: 2rem auto;
     }
 
-    .convite-associacao {
-        max-width: 900px;
-        margin: 2rem auto;
-        border-radius: 8px;
+    .grade-associados {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 
     .busca-empresas form {
@@ -79,90 +74,11 @@
     .busca-empresas input {
         flex: 1;
     }
-}
-
-/* =======================
-   DIRETÓRIO
-======================= */
-
-.view-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.view-controls button {
-    padding: .75rem 1rem;
-    cursor: pointer;
-}
-
-#directory {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-#directory section {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-}
-
-#directory img {
-    width: 120px;
-    height: auto;
-}
-
-@media screen and (min-width: 768px) {
-
-    /* ===== HEADER ===== */
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    nav ul {
-        display: flex;
-        gap: 1rem;
-    }
-
-    nav a {
-        border-radius: 8px;
-    }
-
-    /* ===== DIRETÓRIO ===== */
-
-    #directory {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
 
     footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-    }
-}
-
-
-@media screen and (min-width: 768px) {
-
-    #directory {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    #menuBtn {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    #directory {
-        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
     }
 }
