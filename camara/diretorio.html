@@ -53,8 +53,8 @@
 
         <section class="view-controls">
 
-            <button id="gridBtn" aria-label="Visualização em grade">
-                🔳 Grade
+             <button id="gridBtn" aria-label="Visualização em grade">
+                🔲 Grade
             </button>
 
             <button id="listBtn" aria-label="Visualização em lista">
@@ -63,13 +63,20 @@
 
         </section>
 
-        <section id="directory" class="grid-view">
-            <!-- Os cards serão criados pelo JavaScript -->
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="searchinput"
+                    placeholder="Pesquisar empresa...">
+            </div>
+
+            <div id="members" class="grid"></div>
+
         </section>
+
 
     </main>
 
-    <!-- COPIE O MESMO FOOTER DO INDEX -->
 
     <footer>
 

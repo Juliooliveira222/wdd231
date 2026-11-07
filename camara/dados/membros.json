@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Caçapava Informática",
+    "address": "Rua Marechal Deodoro, 120",
+    "phone": "(12) 3650-1111",
+    "website": "https://www.cacapavainfo.com.br",
+    "image": "images/logo1.webp",
+    "membership": 3
+  },
+  {
+    "name": "Vale Paraíba Engenharia",
+    "address": "Av. Brasil, 450",
+    "phone": "(12) 3650-2222",
+    "website": "https://www.vpengenharia.com.br",
+    "image": "images/logo2.webp",
+    "membership": 2
+  },
+  {
+  "name": "Caçapava Logística",
+  "address": "Av. Brasil, 785",
+  "phone": "(12) 3650-3344",
+  "website": "https://www.cacapavalogistica.com.br",
+  "membership": 1
+},
+{
+  "name": "Vale Tech Soluções",
+  "address": "Rua José de Alencar, 210",
+  "phone": "(12) 3650-4455",
+  "website": "https://www.valetech.com.br",
+  "membership": 3
+},
+{
+  "name": "Indústria Serra Azul",
+  "address": "Rodovia Presidente Dutra, Km 128",
+  "phone": "(12) 3650-5566",
+  "website": "https://www.serraazul.ind.br",
+  "membership": 2
+},
+{
+  "name": "Mercado Central Caçapava",
+  "address": "Praça da Bandeira, 45",
+  "phone": "(12) 3650-6677",
+  "website": "https://www.mercadocentralcacapava.com.br",
+  "membership": 1
+},
+{
+  "name": "Construtora Vale Verde",
+  "address": "Rua dos Ipês, 320",
+  "phone": "(12) 3650-7788",
+  "website": "https://www.valeverdeengenharia.com.br",
+  "membership": 3
+}
+
+]
+

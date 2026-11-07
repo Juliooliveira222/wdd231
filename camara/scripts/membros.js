@@ -1,108 +1,122 @@
-const menuButton = document.querySelector("#menu-button");
-const navigation = document.querySelector("#navigation");
-const links = document.querySelectorAll("#navigation a");
 
-function fecharMenu() {
-    navigation.classList.remove("open");
-    menuButton.textContent = "☰";
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute(
-        "aria-label",
-        "Abrir menu de navegação"
-    );
+const menuBtn = document.querySelector("#menuBtn");
+const menu = document.querySelector("#menu");
+
+if (menuBtn && menu) {
+    menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
 }
 
-menuButton.addEventListener("click", () => {
+const url = "./dados/membros.json";
+const cards = document.querySelector("#members");
+const searchInput = document.querySelector("#searchInput");
 
-    const menuAberto = navigation.classList.toggle("open");
+let allMembers = [];
 
-    menuButton.textContent = menuAberto ? "✖" : "☰";
+const membershipLevels = {
+    1: "Membro",
+    2: "Prata",
+    3: "Ouro"
+};
 
-    menuButton.setAttribute(
-        "aria-expanded",
-        menuAberto
-    );
-
-    menuButton.setAttribute(
-        "aria-label",
-        menuAberto
-            ? "Fechar menu de navegação"
-            : "Abrir menu de navegação"
-    );
-
-});
-
-links.forEach(link => {
-    link.addEventListener("click", fecharMenu);
-});
-
-document.addEventListener("keydown", event => {
-
-    if (
-        event.key === "Escape" &&
-        navigation.classList.contains("open")
-    ) {
-        fecharMenu();
-        menuButton.focus();
-    }
-
-});
-
-const forecastElement = document.querySelector("#weather-forecast");
-
-const apiKey = "e7d9532c6269460b997b5169d32c78c5";
-const lat = -23.10;
-const lon = -45.70;
-
-const urlClima = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${apiKey}`;
-
-async function buscarClima() {
+async function getMembers() {
     try {
+        const response = await fetch(url);
 
-        const resposta = await fetch(urlClima);
-
-        if (!resposta.ok) {
-            throw new Error("Erro ao buscar previsão");
+        if (!response.ok) {
+            throw new Error(`Erro HTTP: ${response.status}`);
         }
 
-        const dados = await resposta.json();
+        const data = await response.json();
 
-        mostrarClima(dados);
+        allMembers = data;
 
-    } catch (erro) {
+        displayMembers(allMembers);
 
-        forecastElement.textContent =
-            "Não foi possível carregar a previsão.";
+    } catch (error) {
+        console.error("Erro ao carregar membros:", error);
 
-        console.error(erro);
+        cards.innerHTML = `
+            <p>Não foi possível carregar os dados das empresas.</p>
+        `;
     }
 }
 
-function mostrarClima(dados) {
+function displayMembers(members) {
 
-    const temperatura = Math.round(dados.main.temp);
-    const descricao = dados.weather[0].description;
-    const icone = dados.weather[0].icon;
+    cards.innerHTML = "";
 
-    forecastElement.innerHTML = `
-        <div class="weather-info">
-            <img
-                src="https://openweathermap.org/img/wn/${icone}@2x.png"
-                alt="${descricao}"
-            >
-            <p><strong>${temperatura}°C</strong></p>
-            <p>${descricao}</p>
-        </div>
-    `;
+    members.forEach(member => {
+
+        const card = document.createElement("section");
+
+        card.classList.add("member-card");
+
+        card.innerHTML = `
+            <h2>${member.name}</h2>
+
+            <p>
+                <strong>Endereço:</strong>
+                ${member.address}
+            </p>
+
+            <p>
+                <strong>Telefone:</strong>
+                ${member.phone}
+            </p>
+
+            <p>
+                <a
+                    href="${member.website}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visitar Site
+                </a>
+            </p>
+
+            <p>
+                <strong>Plano:</strong>
+                ${membershipLevels[member.membership]}
+            </p>
+        `;
+
+        cards.appendChild(card);
+    });
 }
 
-if (forecastElement) {
-    buscarClima();
+if (searchInput) {
+
+    searchInput.addEventListener("input", () => {
+
+        const termo = searchInput.value.toLowerCase();
+
+        const filtrados = allMembers.filter(member =>
+            member.name.toLowerCase().includes(termo)
+        );
+
+        displayMembers(filtrados);
+    });
 }
 
-const menuBtn = document.querySelector('#menuBtn');
-const menu = document.querySelector('#menu');
 
-menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('open');
-});
+const gridBtn = document.querySelector("#gridBtn");
+const listBtn = document.querySelector("#listBtn");
+
+if (gridBtn && listBtn && cards) {
+
+    gridBtn.addEventListener("click", () => {
+
+        cards.classList.add("grid");
+        cards.classList.remove("list");
+    });
+
+    listBtn.addEventListener("click", () => {
+
+        cards.classList.add("list");
+        cards.classList.remove("grid");
+    });
+}
+
+getMembers();
