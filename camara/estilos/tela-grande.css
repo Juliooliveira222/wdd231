@@ -141,7 +141,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* ===== FOOTER ===== */
 
     footer {
         display: grid;
@@ -155,6 +154,9 @@
 
     #directory {
         grid-template-columns: repeat(2, 1fr);
+    }
+    #menuBtn {
+        display: none;
     }
 }
 

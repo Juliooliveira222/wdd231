@@ -22,7 +22,7 @@ header {
     background: none;
     border: none;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -199,8 +199,11 @@ header {
 footer {
     background-color: #005a9c;
     color: white;
-    text-align: center;
-    padding: 1rem;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 footer h2 {
@@ -212,9 +215,13 @@ address {
     margin: 1rem 0;
 }
 
-.social-links {
-    margin: 1rem 0;
+.social-links { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
+
 
 .social-links a {
     color: white;
@@ -223,8 +230,13 @@ address {
 }
 
 .social-links img {
-    width: 24px;
-    height: 24px;
+    width: 36px;
+    height: 36px;
+    transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.15);
 }
 
 .visualmente-oculto {
@@ -297,6 +309,13 @@ header {
     font-size: 1.3rem;
 }
 
+
+nav a.active {
+    background: rgba(255,255,255,.15);
+    border-radius: 4px;
+    padding: .5rem .75rem;
+}
+
 nav ul {
     list-style: none;
 }
@@ -328,8 +347,8 @@ main h2 {
 }
 
 .view-controls button {
-     min-width: 110px;
-    padding: .8rem 1rem;
+    min-width: 100px;
+    padding: 0.75rem 1.25rem;
 }
 
 .view-controls button:hover {
@@ -382,6 +401,7 @@ main h2 {
 .directory-header {
     text-align: center;
     padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .list-view {
@@ -435,11 +455,22 @@ footer div {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.member-card p {
+    font-size: 0.95rem;
+}
+.member-card a {
+    font-weight: 600;
 }
 
 
 .member-card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,.15);
+    transform: translateY(-4px);
+    transition: .2s;
 }
 
 #members.list {

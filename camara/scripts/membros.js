@@ -77,6 +77,9 @@ function displayMembers(members) {
         <a href="${member.website}" target="_blank">
             Website
         </a>
+        <p class="membership">
+    ⭐ ${membershipLevels[member.membership]}
+</p>
     </div>
 `;
 
