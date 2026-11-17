@@ -215,3 +215,37 @@ footer {
     transform: translateY(-3px);
     background-color: var(--dourado);
 }
+
+a:focus,
+button:focus {
+    outline: 2px solid gold;
+}
+
+#weather-forecast {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.weather-day {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f5f5f5;
+    box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+
+.weather-day img {
+    width: 60px;
+    height: 60px;
+}
+
+
+.weather-day {
+    transition: transform 0.2s ease;
+}
+
+.weather-day:hover {
+    transform: translateY(-3px);
+}
