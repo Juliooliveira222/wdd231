@@ -177,23 +177,34 @@ header {
 }
 
 footer {
-    background-color: var(--azul);
+    background-color: #0b3d5c;
     color: white;
-    padding: 1.5rem;
-    text-align: center;
+
+    border-top: 5px solid #5fa8d3;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.footer-meta {
+    text-align: right;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin: 1rem 0;
+    gap: 1.5rem;
 }
 
 .social-links img {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
 }
+
 
 .social-links a {
     display: flex;
