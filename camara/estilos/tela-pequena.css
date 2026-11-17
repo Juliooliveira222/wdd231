@@ -14,6 +14,7 @@
     --branco: #fff;
 }
 
+
 body {
     font-family: Roboto, sans-serif;
     background-color: var(--cinza);
@@ -30,6 +31,7 @@ header {
 .logo h1 {
     margin: 0;
 }
+
 
 #menu-button {
     background: none;
@@ -69,6 +71,12 @@ header {
     transform: translateY(-2px);
     background-color: var(--dourado);
     color: black;
+}
+
+#navigation a[aria-current="page"] {
+    font-weight: bold;
+    color: #ffd700;
+    border-bottom: 2px solid #ffd700;
 }
 
 .destaque-principal {
