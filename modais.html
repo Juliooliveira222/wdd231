@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/modal.css">
+    <script type="module" src="script/modal.js"></script>
+</head>
+<body>
+    <h1>Modais</h1>
+<p>Este é um exemplo de como usar modais clássicos com JavaScript apoiando o comportamento do usuário.<br> Clique no botão abaixo para abrir um formulário modal de inscrição na newsletter.</p>
+<button class="botao botao-abrir">Inscrever-se</button>
+<dialog id="inscricao">
+  <h2>Newsletter</h2>
+  <p>Mantenha-se atualizado com nossas últimas notícias e promoções inscrevendo-se na nossa newsletter!</p>
+  <button class="botao-fechar">❌</button>
+  <form class="formulario" method="dialog">
+    <label>Nome<input type="text"></label>
+    <label>E-mail<input type="email"></label>
+    <button class="botao" type="submit">Inscrever-se</button>
+  </form>
+</dialog>
+<hr>
+<p>Este é um exemplo de usar apenas HTML <code>popover</code> para apoiar o diálogo.<br> Clique no botão abaixo para abrir um formulário modal de inscrição na newsletter.</p>
+<button class="botao botao-abrir" popovertarget="newsletter">Inscrever-se</button>
+<p>Note que o atributo <code>popovertarget</code> precisa apontar para o elemento dialog usando seu valor do atributo <code>id</code> para abrir e fechar o modal.</p>
+<dialog class="modal" id="newsletter" popover>
+  <button class="botao-fechar" popovertarget="newsletter" popovertargetaction="hide">❌</button>
+  <h2>Estaca Trek</h2>
+  <h3>Inscrição de Voluntários</h3>
+  <form class="formulario" method="dialog">
+    <label>Nome<input type="text" required></label>
+    <label>Telefone<input type="tel" pattern="^\+?\d{1,4}?\s?(\(?\d{3}\)?\s?-?\s?\d{3}\s?-?\s?\d{4})$" placeholder="+55 11 99999-9999" required></label>
+    <button class="botao" type="submit">Inscrever-se</button>
+  </form>
+</dialog>
+</body>
+</html>
