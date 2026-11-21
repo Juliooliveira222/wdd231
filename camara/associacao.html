@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Associe-se à Câmara de Comércio de Caçapava">
+
+    <title>Associe-se | Câmara de Caçapava</title>
+
+    <link rel="stylesheet" href="estilos/associacao.css">
+
+    <script src="scripts/associacao.js" defer></script>
+</head>
+<body>
+
+<header>
+
+    <h1>Câmara de Comércio de Caçapava</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="diretorio.html">Diretório</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+    <h2>Associe-se à Câmara</h2>
+
+    <p>
+        Faça parte da comunidade empresarial de Caçapava.
+    </p>
+
+</section>
+
+<section class="membership-cards">
+
+
+    <div class="membership-card">
+        <h3>Membro ⭐</h3>
+        <p>Sem custo de associação.</p>
+
+        <button type="button" id="npBtn">
+            Benefícios
+        </button>
+    </div>
+
+    <div class="membership-card">
+        <h3>Prata ⭐</h3>
+        <p>Ideal para pequenas empresas.</p>
+
+        <button type="button" id="bronzeBtn">
+            Benefícios
+        </button>
+    </div>
+
+    <div class="membership-card">
+        <h3>Ouro ⭐</h3>
+        <p>Mais visibilidade para sua empresa.</p>
+
+        <button type="button" id="silverBtn">
+            Benefícios
+        </button>
+    </div>
+
+    <div class="membership-card">
+        <h3>Diamante ⭐</h3>
+        <p>Destaque premium e benefícios exclusivos.</p>
+
+        <button type="button" id="goldBtn">
+            Benefícios
+        </button>
+    </div>
+
+</section>
+
+<section class="form-section">
+
+    <h2>Formulário de Associação</h2>
+
+    <form
+        action="agradecimento.html"
+        method="get">
+
+        <label for="title">
+            Título/Cargo
+        </label>
+
+        <input
+            type="text"
+            id="title"
+            name="title"
+            title="Mínimo de 7 caracteres"
+            pattern="[A-Za-zÀ-ÿ\s\-]{7,}"
+            autocomplete="organization-title"
+            required>
+
+        <label for="fname">
+            Nome
+        </label>
+
+        <input
+            type="text"
+            id="fname"
+            name="fname"
+            title="Digite seu nome"
+            autocomplete="given-name"
+            required>
+
+        <label for="lname">
+            Sobrenome
+        </label>
+
+        <input
+            type="text"
+            id="lname"
+            name="lname"
+            title="Digite seu sobrenome"
+            autocomplete="family-name"
+            required>
+
+        <label for="email">
+            E-mail
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            title="Digite um e-mail válido"
+            placeholder="nome@exemplo.com"
+            autocomplete="email"
+            required>
+
+        <label for="phone">
+            Telefone
+        </label>
+
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            title="Telefone"
+            autocomplete="tel"
+            required>
+
+        <label for="organization">
+            Empresa/Organização
+        </label>
+
+        <input
+            type="text"
+            id="organization"
+            name="organization"
+            title="Nome da empresa"
+            autocomplete="organization"
+            required>
+
+        <label for="membership">
+            Nível de Associação
+        </label>
+
+        <select
+            id="membership"
+            name="membership"
+            required>
+
+           <option value="Membro">
+                Membro ⭐
+            </option>
+
+            <option value="Prata">
+                Prata ⭐
+            </option>
+
+            <option value="Ouro">
+                Ouro ⭐
+            </option>
+
+            <option value="Diamante">
+                Diamante ⭐
+            </option>
+
+        </select>
+
+        <input
+            type="hidden"
+            id="timestamp"
+            name="timestamp">
+
+            <p id="formMessage" aria-live="polite"></p>
+
+        <button type="submit">
+            Enviar Solicitação
+        </button>
+
+    </form>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Câmara de Caçapava</p>
+    <p>WDD 231 - Projeto Câmara de Comércio</p>
+    <p>
+        Última atualização:
+        <span id="lastModified"></span>
+    </p>
+</footer>
+
+<dialog id="npModal">
+    <h3>NP Membership</h3>
+    <ul>
+        <li>Acesso aos eventos da Câmara</li>
+        <li>Recebimento de boletins</li>
+    </ul>
+
+    <button type="button" id="closeNp">
+        Fechar
+    </button>
+</dialog>
+
+<dialog id="bronzeModal">
+    <h3>Bronze Membership</h3>
+    <ul>
+        <li>Todos os benefícios NP</li>
+        <li>Destaque básico</li>
+    </ul>
+
+    <button type="button" id="closeBronze">
+        Fechar
+    </button>
+</dialog>
+
+<dialog id="silverModal">
+    <h3>Silver Membership</h3>
+    <ul>
+        <li>Todos os benefícios Bronze</li>
+        <li>Destaque ampliado</li>
+    </ul>
+
+    <button type="button" id="closeSilver">
+        Fechar
+    </button>
+</dialog>
+
+<dialog id="goldModal">
+    <h3>Gold Membership</h3>
+    <ul>
+        <li>Todos os benefícios Silver</li>
+        <li>Destaque premium</li>
+    </ul>
+
+    <button type="button" id="closeGold">
+        Fechar
+    </button>
+</dialog>
+
+</body>
+</html>
